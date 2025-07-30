@@ -10,7 +10,7 @@ echo
 # 1. NAVIGATION COMMANDS
 echo "1. Navigation Commands"
 echo "Current directory:"
-pwd
+pwd 
 
 echo -e "\nList files in current directory:"
 ls
