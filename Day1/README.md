@@ -31,7 +31,7 @@ By the end of today, you will be able to:
 ### 4. Cybersecurity Context
 - Why bash is crucial for cybersecurity
 - Common use cases in penetration testing
-- File system security basics
+- File system security basics 
 
 ## Exercises
 1. **Basic Navigation** (`exercises/basic_commands.sh`)
