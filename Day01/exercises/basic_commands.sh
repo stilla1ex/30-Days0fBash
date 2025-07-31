@@ -21,7 +21,7 @@ echo -e "\nList files with details:"
 ls -la # This command lists files with detailed information including permissions, owner, size, and modification date
 
 echo -e "\nList files in /etc (important config directory):"
-ls /etc | head -10 # The pipe (|) operator sends output from ls to head command
+ls /etc | head -10 # The pipe (|) operator sends output from ls to head command. Meaning, take the output of ls and pass it to head command to show only the first 10 lines
 
 # 2. FILE OPERATIONS
 echo -e "\n2. File Operations"
@@ -30,7 +30,7 @@ echo -e "\n2. File Operations"
 echo "Creating test directory..."
 mkdir -p test_dir
 
-# Navigate to test directory
+# Navigate to test directory using the cd command
 cd test_dir
 echo "Current directory: $(pwd)"
 
@@ -44,7 +44,7 @@ echo "Confidential data" > secret.log
 echo "Copying files..."
 cp file1.txt file1_backup.txt # cp creates a duplicate of the file
 
-# Move/rename files
+# Move/rename files using the mv command
 echo "Renaming file..."
 mv file2.txt renamed_file.txt
 
@@ -73,13 +73,6 @@ echo "- /var/log: System logs"
 echo "- /home: User directories"
 echo "- /tmp: Temporary files"
 
-echo -e "\nChecking important log files:"
-if [ -f /var/log/auth.log ]; then
-    echo "Authentication log exists: /var/log/auth.log"
-    echo "Last 3 login attempts:"
-    tail -3 /var/log/auth.log 2>/dev/null || echo "Permission denied (normal for regular users)"
-fi
-
 # Clean up
 cd ..
 echo -e "\nCleaning up test directory..."
@@ -87,4 +80,3 @@ rm -rf test_dir
 
 echo -e "\n=== Exercise Complete ==="
 echo "Practice these commands until they become second nature!"
-# Added comment explaining the pipe operator
