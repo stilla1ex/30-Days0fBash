@@ -42,7 +42,7 @@ echo "Confidential data" > secret.log
 
 # Copy files
 echo "Copying files..."
-cp file1.txt file1_backup.txt
+cp file1.txt file1_backup.txt # cp creates a duplicate of the file
 
 # Move/rename files
 echo "Renaming file..."
