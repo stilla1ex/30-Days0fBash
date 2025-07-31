@@ -21,7 +21,7 @@ echo -e "\nList files with details:"
 ls -la # This command lists files with detailed information including permissions, owner, size, and modification date
 
 echo -e "\nList files in /etc (important config directory):"
-ls /etc | head -10
+ls /etc | head -10 # The pipe (|) operator sends output from ls to head command
 
 # 2. FILE OPERATIONS
 echo -e "\n2. File Operations"
@@ -87,3 +87,4 @@ rm -rf test_dir
 
 echo -e "\n=== Exercise Complete ==="
 echo "Practice these commands until they become second nature!"
+# Added comment explaining the pipe operator
