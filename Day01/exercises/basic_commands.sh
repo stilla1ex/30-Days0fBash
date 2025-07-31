@@ -3,20 +3,22 @@
 # Day 1 Exercise: Basic Commands
 # Practice essential Linux commands for cybersecurity
 
+#The echo command is used to display messages in the terminal
 echo "=== Day 1: Basic Commands Exercise ==="
-echo "Follow along and practice each command"
-echo
+echo "Follow along and practice each command with me"
+echo # This line adds a new line for better readability on the terminal
 
 # 1. NAVIGATION COMMANDS
 echo "1. Navigation Commands"
 echo "Current directory:"
-pwd 
+pwd # This command prints the current working directory
 
+# The -e option allows for interpretation of escape sequences like \n and \t
 echo -e "\nList files in current directory:"
-ls
+ls # This command lists the files in the current working directory
 
 echo -e "\nList files with details:"
-ls -la
+ls -la # This command lists files with detailed information including permissions, owner, size, and modification date
 
 echo -e "\nList files in /etc (important config directory):"
 ls /etc | head -10
