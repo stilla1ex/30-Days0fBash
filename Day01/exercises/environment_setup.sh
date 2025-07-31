@@ -11,7 +11,7 @@ echo "Current shell: $SHELL"
 echo "Home directory: $HOME"
 echo "Current user: $USER"
 echo "PATH variable:"
-echo $PATH | tr ':' '\n'
+echo $PATH | tr ':' '\n' # This command prints each directory in PATH on a new line
 
 echo -e "\n2. Useful Aliases for Cybersecurity"
 echo "Creating temporary aliases for this session..."
@@ -25,8 +25,10 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 # Cybersecurity specific aliases
-alias ports='netstat -tuln'
-alias processes='ps aux'
+alias ports='netstat -tuln' # Show open ports
+alias processes='ps aux' # Show running processes
+alias ipinfo='ip addr show' # Show IP address information
+alias netinfo='ifconfig' # Show network interface information
 alias meminfo='free -h'
 alias diskinfo='df -h'
 alias listening='netstat -tlnp'
