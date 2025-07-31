@@ -36,7 +36,7 @@ echo "Current directory: $(pwd)"
 
 # Create test files
 echo "Creating test files..."
-touch file1.txt file2.txt secret.log
+touch file1.txt file2.txt secret.log # touch creates empty files with current timestamp
 echo "Test content" > file1.txt
 echo "Confidential data" > secret.log
 
