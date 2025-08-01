@@ -89,7 +89,7 @@ By the end of Day 1, you will be able to:
 ## 📚 Additional Resources
 - [Bash Manual](https://www.gnu.org/software/bash/manual/)
 - [Linux Command Reference](https://www.linux.org/docs/)
-- [Cybersecurity File System Guide](./LEARNING_PATH.md)
+- [Learning Path Recommendations](./LEARNING_PATH.md)
 
 ## ✅ Knowledge Check
 Before moving to Day 2, ensure you can:
