@@ -6,7 +6,7 @@ echo "🏆 Day 1 Challenge: Create Your Security Project"
 echo "Time to apply everything you've learned!"
 echo
 
-echo "🎯 YOUR MISSION:"
+echo "GOAL: YOUR MISSION:"
 echo "Create a directory structure for a cybersecurity project"
 echo "and practice all the commands you've learned today."
 echo
@@ -26,7 +26,7 @@ echo "Create a directory called 'security_project'"
 pause
 
 if [ -d "security_project" ]; then
-    echo "✅ Great! security_project directory created"
+    echo "[OK] Great! security_project directory created"
 else
     echo "❌ Directory not found. Did you create it?"
     echo "Hint: mkdir security_project"
@@ -44,7 +44,7 @@ echo "Commands to use: cd security_project, then mkdir for each"
 pause
 
 if [ -d "security_project/logs" ] && [ -d "security_project/tools" ] && [ -d "security_project/reports" ] && [ -d "security_project/configs" ]; then
-    echo "✅ Excellent! All subdirectories created"
+    echo "[OK] Excellent! All subdirectories created"
 else
     echo "❌ Some directories are missing. Check your work:"
     echo "Expected: logs, tools, reports, configs"
@@ -62,7 +62,7 @@ echo "Commands to use: touch filename, echo 'content' > filename"
 pause
 
 if [ -f "security_project/README.txt" ] && [ -f "security_project/project_info.txt" ]; then
-    echo "✅ Perfect! Project files created"
+    echo "[OK] Perfect! Project files created"
 else
     echo "❌ Some files are missing:"
     echo "Expected: README.txt, project_info.txt" 
@@ -84,7 +84,7 @@ readme_size=$(wc -c < security_project/README.txt 2>/dev/null || echo 0)
 info_size=$(wc -c < security_project/project_info.txt 2>/dev/null || echo 0)
 
 if [ "$readme_size" -gt 0 ] && [ "$info_size" -gt 0 ]; then
-    echo "✅ Awesome! Files have content"
+    echo "[OK] Awesome! Files have content"
 else
     echo "❌ Files appear to be empty. Add some content!"
     exit 1
@@ -98,7 +98,7 @@ echo "Command to use: cp"
 pause
 
 if [ -f "security_project/project_info_backup.txt" ]; then
-    echo "✅ Great! Backup created"
+    echo "[OK] Great! Backup created"
 else
     echo "❌ Backup file not found"
     echo "Hint: cp project_info.txt project_info_backup.txt"
@@ -141,21 +141,21 @@ fi
 echo "🎉 CHALLENGE COMPLETE!"
 echo
 echo "🏆 What you accomplished:"
-echo "   ✅ Created a project directory structure"
-echo "   ✅ Used mkdir to create directories"
-echo "   ✅ Used touch and echo to create files"
-echo "   ✅ Added content to files"
-echo "   ✅ Made backup copies with cp"
-echo "   ✅ Explored your work with ls and cat"
+echo "   [OK] Created a project directory structure"
+echo "   [OK] Used mkdir to create directories"
+echo "   [OK] Used touch and echo to create files"
+echo "   [OK] Added content to files"
+echo "   [OK] Made backup copies with cp"
+echo "   [OK] Explored your work with ls and cat"
 echo
-echo "🎓 Skills demonstrated:"
+echo "LEARNED: Skills demonstrated:"
 echo "   • Directory navigation"
 echo "   • File and directory creation"
 echo "   • File content management"
 echo "   • File copying"
 echo "   • Project organization"
 echo
-echo "🚀 You're ready for Day 2!"
+echo "READY: You're ready for Day 2!"
 echo "Tomorrow you'll learn about variables and make your first interactive script!"
 
 # Optional cleanup prompt

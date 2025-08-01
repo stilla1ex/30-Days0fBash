@@ -9,13 +9,13 @@ echo
 echo "📍 Current location: $(pwd)"
 
 # Show basic system info
-echo "🖥️  System Information:"
+echo "SYSTEM:  System Information:"
 echo "   User: $(whoami)"
 echo "   Home: $HOME"
 echo "   Shell: $SHELL"
 
 # Check if basic commands work
-echo -e "\n🔧 Testing Basic Commands:"
+echo -e "\nTESTING: Testing Basic Commands:"
 echo "   ✓ ls command available"
 ls --version | head -1
 
@@ -25,5 +25,5 @@ cat --version | head -1
 echo "   ✓ grep command available"
 grep --version | head -1
 
-echo -e "\n✅ Your environment is ready for Day 1 exercises!"
-echo "💡 Tip: Try running the exercises in the exercises/ folder"
+echo -e "\n[OK] Your environment is ready for Day 1 exercises!"
+echo "TIP: Tip: Try running the exercises in the exercises/ folder"

@@ -32,7 +32,7 @@ echo "touch creates an empty file"
 pause
 
 touch hello.txt
-echo "✅ Created hello.txt"
+echo "[OK] Created hello.txt"
 ls -l hello.txt
 echo
 
@@ -42,7 +42,7 @@ echo "The > symbol redirects output to a file"
 pause
 
 echo 'Hello World!' > hello.txt
-echo "✅ Added content to hello.txt"
+echo "[OK] Added content to hello.txt"
 echo
 
 echo "Let's see what's in the file:"
@@ -62,7 +62,7 @@ echo "cp copies files"
 pause
 
 cp hello.txt hello_backup.txt
-echo "✅ Created backup"
+echo "[OK] Created backup"
 ls -l hello*
 echo
 
@@ -73,14 +73,14 @@ echo "Command: mkdir projects"
 pause
 
 mkdir projects
-echo "✅ Created projects directory"
+echo "[OK] Created projects directory"
 
 echo "Command: mkdir -p work/important/secret"
 echo "The -p flag creates parent directories if needed"
 pause
 
 mkdir -p work/important/secret
-echo "✅ Created nested directory structure"
+echo "[OK] Created nested directory structure"
 echo "Let's see what we built:"
 ls -la
 echo
@@ -93,7 +93,7 @@ echo "mv moves files (also used for renaming)"
 pause
 
 mv hello.txt projects/
-echo "✅ Moved hello.txt to projects/"
+echo "[OK] Moved hello.txt to projects/"
 echo "Current directory contents:"
 ls -la
 echo "Projects directory contents:"
@@ -105,7 +105,7 @@ echo "Command: mv hello_backup.txt greeting.txt"
 pause
 
 mv hello_backup.txt greeting.txt
-echo "✅ Renamed file"
+echo "[OK] Renamed file"
 ls -la
 echo
 
@@ -136,7 +136,7 @@ echo "rm deletes files (be careful!)"
 pause
 
 rm greeting.txt
-echo "✅ Removed greeting.txt"
+echo "[OK] Removed greeting.txt"
 echo
 
 echo "Command: rm -r work"
@@ -144,7 +144,7 @@ echo "rm -r removes directories and their contents recursively"
 pause
 
 rm -r work
-echo "✅ Removed work directory"
+echo "[OK] Removed work directory"
 echo
 
 echo "Let's go back to parent directory and clean up:"
@@ -153,10 +153,10 @@ echo "Command: rm -r day1_practice"
 pause
 
 rm -r day1_practice
-echo "✅ Cleanup complete!"
+echo "[OK] Cleanup complete!"
 echo
 
-echo "🎓 What you learned:"
+echo "LEARNED: What you learned:"
 echo "   • touch - creates empty files"
 echo "   • echo 'text' > file - puts text in a file"
 echo "   • cat - displays file contents"
@@ -169,6 +169,6 @@ echo "   • rm -r - deletes directories recursively"
 echo "   • wc - counts lines, words, characters"
 echo "   • file - identifies file types"
 echo
-echo "⚠️  IMPORTANT: rm deletes permanently - there's no trash!"
+echo "WARNING:  IMPORTANT: rm deletes permanently - there's no trash!"
 echo
 echo "Next: Run './exercises/help_systems.sh'"

@@ -1,20 +1,20 @@
 # Day 9: Command-Line Arguments and Options
 
-## 🎯 **Learning Goal**
+## Learning Goal
 Make professional command-line tools with proper argument processing.
 
-## 📚 **What You'll Learn Today**
+## What You'll Learn Today
 - Processing command-line arguments
 - Handling flags and options
 - Using getopts for professional tools
 - Building user-friendly interfaces
 
-## 🛠️ **Today's Concepts to Master**
+## Today's Concepts to Master
 ```bash
 $1, $2, $@, $#, getopts, shift, case
 ```
 
-## 📖 **Learning Path** (4-5 hours)
+## Learning Path (4-5 hours)
 
 ### **Step 1**: Basic Arguments (60 min)
 ```bash
@@ -36,7 +36,7 @@ $1, $2, $@, $#, getopts, shift, case
 ./scripts/professional_scanner.sh
 ```
 
-## ✅ **Daily Challenge**
+## Daily Challenge
 Create a file analyzer with options:
 ```bash
 #!/bin/bash
@@ -79,11 +79,11 @@ for file in "$@"; do
 done
 ```
 
-## 🎓 **Success Criteria**
+## Success Criteria
 - [ ] Can process command-line arguments
 - [ ] Can use getopts for options
 - [ ] Can build professional CLIs
 - [ ] Created a tool with help system
 
-## 🚀 **Tomorrow Preview**
+## Tomorrow Preview
 Day 10: Process management and job control!

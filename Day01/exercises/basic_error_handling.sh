@@ -6,7 +6,7 @@
 echo "=== Day 1: Understanding Command Success and Failure ==="
 echo
 
-echo "🎯 Let's learn about command success and failure:"
+echo "GOAL: Let's learn about command success and failure:"
 echo
 
 # Example 1: Successful command
@@ -27,7 +27,7 @@ echo
 echo "3. Checking if a command exists:"
 echo "Command: which nmap"
 if which nmap >/dev/null 2>&1; then
-    echo "✅ nmap is installed"
+    echo "[OK] nmap is installed"
 else
     echo "❌ nmap is not installed or not in PATH"
 fi
@@ -38,7 +38,7 @@ echo "4. Checking if a file exists:"
 test_file="/etc/passwd"
 echo "Checking if $test_file exists..."
 if [ -f "$test_file" ]; then
-    echo "✅ File exists"
+    echo "[OK] File exists"
     echo "File size: $(wc -l < $test_file) lines"
 else
     echo "❌ File does not exist"
@@ -49,10 +49,10 @@ echo
 echo "5. Conditional command execution:"
 echo "This will create a directory only if it doesn't exist:"
 echo "Command: mkdir -p test_directory"
-mkdir -p test_directory && echo "✅ Directory created or already exists"
+mkdir -p test_directory && echo "[OK] Directory created or already exists"
 echo
 
-echo "🎓 Key Learning Points:"
+echo "LEARNED: Key Learning Points:"
 echo "• Exit code 0 = success"
 echo "• Exit code non-zero = failure" 
 echo "• Use \$? to check the last command's exit code"

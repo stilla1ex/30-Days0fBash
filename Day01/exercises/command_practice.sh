@@ -14,7 +14,7 @@ wait_for_user() {
     echo
 }
 
-echo "🎯 EXERCISE 1: Navigation Commands"
+echo "GOAL: EXERCISE 1: Navigation Commands"
 echo "Try these commands one by one:"
 echo
 echo "1. pwd       (show current directory)"
@@ -26,7 +26,7 @@ echo "6. cd -      (go back to previous directory)"
 
 wait_for_user
 
-echo "🎯 EXERCISE 2: File Operations"
+echo "GOAL: EXERCISE 2: File Operations"
 echo "Let's create and work with files:"
 echo
 echo "1. mkdir practice_folder"
@@ -39,7 +39,7 @@ echo "7. ls -la"
 
 wait_for_user
 
-echo "🎯 EXERCISE 3: Information Commands"
+echo "GOAL: EXERCISE 3: Information Commands"
 echo "Learn about your system:"
 echo
 echo "1. whoami    (current user)"
@@ -50,7 +50,7 @@ echo "5. man ls    (manual for ls command - press 'q' to quit)"
 
 wait_for_user
 
-echo "🎯 EXERCISE 4: Basic Text Operations"
+echo "GOAL: EXERCISE 4: Basic Text Operations"
 echo "Working with file content:"
 echo
 echo "1. echo 'Line 1' > sample.txt"
@@ -61,6 +61,6 @@ echo "5. grep 'Line' sample.txt"
 
 wait_for_user
 
-echo "✅ Practice Complete!"
-echo "💡 Remember: Practice these commands until they become natural!"
+echo "[OK] Practice Complete!"
+echo "TIP: Remember: Practice these commands until they become natural!"
 echo "🔄 You can run this script again anytime to practice."

@@ -18,13 +18,13 @@
 2. **`exercises/`** folder - Great approach for guided learning
 3. **Commented code** - Excellent for learning
 
-### ⚠️ Concerns:
+### Concerns:
 1. **`setup_environment.sh`** - Too complex for Day 1
    - 166 lines with advanced error handling
    - Multiple functions and complex logic
    - Should be moved to Day 3-5
 
-### 📋 Recommended Changes:
+### Recommended Changes:
 
 #### Move to Later Days:
 - `scripts/setup_environment.sh` → **Day 3 or 4**
