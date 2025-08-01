@@ -1,20 +1,20 @@
 # Day 7: Arrays and Advanced Data Structures
 
-## 🎯 **Learning Goal**
+## Learning Goal
 Master arrays to handle multiple pieces of data efficiently.
 
-## 📚 **What You'll Learn Today**
+## What You'll Learn Today
 - Creating and using arrays
 - Associative arrays (hash tables)
 - Processing array data
 - Building data-driven scripts
 
-## 🛠️ **Today's Concepts to Master**
+## Today's Concepts to Master
 ```bash
 array=(), ${array[@]}, ${!array[@]}, declare -A
 ```
 
-## 📖 **Learning Path** (3-4 hours)
+## Learning Path (3-4 hours)
 
 ### **Step 1**: Basic Arrays (60 min)
 ```bash
@@ -36,8 +36,8 @@ array=(), ${array[@]}, ${!array[@]}, declare -A
 ./scripts/contact_manager.sh
 ```
 
-## ✅ **Daily Challenge**
-Create a port scanner tracker:
+## Daily Challenge
+Create a contact management system using associative arrays.
 ```bash
 #!/bin/bash
 declare -A port_status
@@ -56,11 +56,11 @@ for port in "${!port_status[@]}"; do
 done
 ```
 
-## 🎓 **Success Criteria**
+## Success Criteria
 - [ ] Can create and manipulate arrays
 - [ ] Understand associative arrays
 - [ ] Can loop through array data
 - [ ] Built a data management script
 
-## 🚀 **Tomorrow Preview**
+## Tomorrow Preview
 Day 8: Error handling and debugging!
