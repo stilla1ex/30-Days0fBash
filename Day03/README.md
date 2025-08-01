@@ -29,7 +29,6 @@ if, then, else, elif, fi, test, [, [[, -f, -d, -z, -n
 ### Step 3: Security Check Challenge (60 min)
 ```bash
 ./exercises/daily_challenge.sh
-```## Success Criteria
 - Can write if/then/else statements
 - Understand file testing (-f, -d, -r, -w)
 - Can compare strings and numbers
