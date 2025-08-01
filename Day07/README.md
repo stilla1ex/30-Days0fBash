@@ -37,7 +37,7 @@ array=(), ${array[@]}, ${!array[@]}, declare -A
 ```
 
 ## Daily Challenge
-Create a contact management system using associative arrays.
+Create a port scanner tracker using associative arrays to monitor the status of specific ports.
 ```bash
 #!/bin/bash
 declare -A port_status
