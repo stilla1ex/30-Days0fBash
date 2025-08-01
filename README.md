@@ -66,4 +66,4 @@ Each day contains:
 - `scripts/`: Practical cybersecurity scripts
 - `resources/`: Additional reading and references
 
-Happy learning! 🚀🔒
+Happy learning!

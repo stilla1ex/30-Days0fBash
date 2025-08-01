@@ -1,6 +1,6 @@
-# 🚀 **30-Day Bash Mastery: Zero to Hero Complete Path**
+# 30-Day Bash Mastery: Zero to Hero Complete Path
 
-## 📋 **Learning Philosophy**
+## Learning Philosophy
 - **Focus on fundamentals first** - Solid foundation before complexity
 - **Learn by doing** - Every concept has hands-on practice
 - **Progressive complexity** - Each day builds on previous knowledge
@@ -8,7 +8,7 @@
 
 ---
 
-## 🏁 **Phase 1: Foundation (Days 1-5) - Beginner**
+## Phase 1: Foundation (Days 1-5) - Beginner
 
 ### **Day 1: Your First Steps**
 **Goal**: Master basic commands
@@ -44,7 +44,7 @@
 
 ---
 
-## ⚡ **Phase 2: Core Skills (Days 6-10) - Intermediate**
+## Phase 2: Core Skills (Days 6-10) - Intermediate
 
 ### **Day 6: Text Processing** 
 **Goal**: Master data extraction
@@ -136,7 +136,7 @@
 
 ---
 
-## 🎯 **Phase 4: Real Projects (Days 21-30) - Expert**
+## Phase 4: Real Projects (Days 21-30) - Expert
 
 ### **Day 21-22: System Administration Project**
 **Goal**: Complete admin automation
@@ -167,7 +167,7 @@
 
 ---
 
-## 🎓 **Learning Schedule Recommendations**
+## Learning Schedule Recommendations
 
 ### **Intensive Track (Full-time)**
 - **Hours per day**: 6-8 hours
@@ -186,7 +186,7 @@
 
 ---
 
-## 📊 **Daily Success Metrics**
+## Daily Success Metrics
 
 ### **Beginner Days (1-5)**
 - [ ] Completed all exercises
@@ -214,7 +214,7 @@
 
 ---
 
-## 🛠️ **Required Tools and Setup**
+## Required Tools and Setup
 
 ### **Day 1 Setup**
 ```bash
@@ -255,7 +255,7 @@ sudo apt install -y git vim nano curl wget tree
 
 ---
 
-## 🎯 **Final Portfolio Projects**
+## Final Portfolio Projects
 
 By Day 30, you'll have built:
 
@@ -265,7 +265,7 @@ By Day 30, you'll have built:
 4. **Data Processing Pipeline** (Days 25-28)
 5. **Enterprise Integration Solution** (Days 29-30)
 
-## 🚀 **Career Outcomes**
+## Career Outcomes
 
 After 30 days, you'll be qualified for:
 - **DevOps Engineer** positions
