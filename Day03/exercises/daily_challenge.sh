@@ -30,21 +30,21 @@ fi
 
 # Check SSH configuration
 if [ -f "/etc/ssh/sshd_config" ]; then
-    echo "✓ SSH config exists"
+    echo "[OK] SSH config exists"
     if grep -q "PermitRootLogin no" /etc/ssh/sshd_config 2>/dev/null; then
-        echo "✓ Root login disabled"
+        echo "[OK] Root login disabled"
     else
-        echo "! Root login may be enabled"
+        echo "[WARNING] Root login may be enabled"
     fi
 else
-    echo "✗ SSH config not found"
+    echo "[FAIL] SSH config not found"
 fi
 
 # Check for firewall
 if command -v ufw >/dev/null 2>&1; then
-    echo "✓ UFW firewall available"
+    echo "[OK] UFW firewall available"
 else
-    echo "! UFW firewall not found"
+    echo "[WARNING] UFW firewall not found"
 fi
 
 # Check system updates (basic)

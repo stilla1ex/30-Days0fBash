@@ -136,7 +136,7 @@
 
 ---
 
-## 🎯 **Phase 4: Real Projects (Days 21-30) - Expert**
+## Phase 4: Real Projects (Days 21-30) - Expert
 
 ### **Day 21-22: System Administration Project**
 **Goal**: Complete admin automation
@@ -167,7 +167,7 @@
 
 ---
 
-## 🎓 **Learning Schedule Recommendations**
+## Learning Schedule Recommendations
 
 ### **Intensive Track (Full-time)**
 - **Hours per day**: 6-8 hours
@@ -186,7 +186,7 @@
 
 ---
 
-## 📊 **Daily Success Metrics**
+## Daily Success Metrics
 
 ### **Beginner Days (1-5)**
 - [ ] Completed all exercises
