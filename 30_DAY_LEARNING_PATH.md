@@ -214,7 +214,7 @@
 
 ---
 
-## 🛠️ **Required Tools and Setup**
+## Required Tools and Setup
 
 ### **Day 1 Setup**
 ```bash
@@ -255,7 +255,7 @@ sudo apt install -y git vim nano curl wget tree
 
 ---
 
-## 🎯 **Final Portfolio Projects**
+## Final Portfolio Projects
 
 By Day 30, you'll have built:
 
@@ -265,7 +265,7 @@ By Day 30, you'll have built:
 4. **Data Processing Pipeline** (Days 25-28)
 5. **Enterprise Integration Solution** (Days 29-30)
 
-## 🚀 **Career Outcomes**
+## Career Outcomes
 
 After 30 days, you'll be qualified for:
 - **DevOps Engineer** positions
