@@ -6,21 +6,53 @@ echo "=== Cybersecurity Bash Environment Setup ==="
 # Create cybersecurity directory structure
 create_directories() {
     echo "Creating cybersecurity workspace..."
-    mkdir -p ~/cybersec/{
-        tools/{scanners,analyzers,monitors},
-        data/{logs,captures,reports},
-        scripts/{recon,analysis,automation},
-        resources/{wordlists,configs,documentation}
-    }
-    echo "✓ Directory structure created"
+    
+    # Create main directory structure
+    local dirs=(
+        "~/cybersec/tools/scanners"
+        "~/cybersec/tools/analyzers" 
+        "~/cybersec/tools/monitors"
+        "~/cybersec/data/logs"
+        "~/cybersec/data/captures"
+        "~/cybersec/data/reports"
+        "~/cybersec/scripts/recon"
+        "~/cybersec/scripts/analysis"
+        "~/cybersec/scripts/automation"
+        "~/cybersec/resources/wordlists"
+        "~/cybersec/resources/configs"
+        "~/cybersec/resources/documentation"
+    )
+    
+    for dir in "${dirs[@]}"; do
+        eval "mkdir -p $dir"
+        if [[ $? -eq 0 ]]; then
+            echo "✓ Created: $dir"
+        else
+            echo "✗ Failed to create: $dir"
+            return 1
+        fi
+    done
+    
+    echo "✓ Directory structure created successfully"
 }
 
 # Set up useful aliases for cybersecurity work
 setup_aliases() {
     echo "Setting up cybersecurity aliases..."
     
+    # Check if .bashrc exists
+    if [[ ! -f ~/.bashrc ]]; then
+        echo "⚠️  ~/.bashrc not found, creating one..."
+        touch ~/.bashrc
+    fi
+    
     # Backup existing bashrc
-    cp ~/.bashrc ~/.bashrc.backup.$(date +%Y%m%d)
+    if cp ~/.bashrc ~/.bashrc.backup.$(date +%Y%m%d_%H%M%S); then
+        echo "✓ Backup created: ~/.bashrc.backup.$(date +%Y%m%d_%H%M%S)"
+    else
+        echo "✗ Failed to backup ~/.bashrc"
+        return 1
+    fi
     
     cat >> ~/.bashrc << 'EOF'
 
@@ -41,15 +73,15 @@ alias meminfo='free -h'
 alias cpuinfo='lscpu'
 
 # Network & Security
-alias myip='curl -s ifconfig.me'
-alias ports='nmap localhost'
+alias myip='curl -s --connect-timeout 5 ifconfig.me || echo "Network unavailable"'
+alias ports='command -v nmap >/dev/null && nmap localhost || echo "nmap not installed"'
 alias connections='ss -tuln'
-alias firewall='sudo iptables -L'
+alias firewall='sudo iptables -L 2>/dev/null || echo "iptables not accessible"'
 
 # Log Analysis
-alias lastlogins='last -10'
-alias failedlogins='grep "Failed password" /var/log/auth.log | tail -10'
-alias logwatch='tail -f /var/log/syslog'
+alias lastlogins='last -10 2>/dev/null || echo "last command not available"'
+alias failedlogins='sudo grep "Failed password" /var/log/auth.log 2>/dev/null | tail -10 || echo "Auth log not accessible"'
+alias logwatch='sudo tail -f /var/log/syslog 2>/dev/null || echo "Syslog not accessible"'
 
 # Quick Security Checks
 alias checkroot='find / -perm -4000 2>/dev/null'
