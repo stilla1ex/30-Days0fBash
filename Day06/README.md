@@ -1,48 +1,55 @@
-# Day 6: File Operations & Text Processing
+# Day 6: Text Processing and Pattern Matching
 
-## Learning Objectives
-- Master advanced file operations
-- Learn text processing fundamentals
-- Understand pattern matching and searching
-- Build tools for log analysis
+## 🎯 **Learning Goal**
+Master text processing tools for log analysis and data extraction.
 
-## Topics Covered
-
-### Advanced File Operations
-- **File Permissions**: `chmod`, `chown`, `chgrp`
-- **File Compression**: `zip`, `unzip`, `tar`, `gzip`
-- **File Synchronization**: `rsync`, `scp`
-- **File Monitoring**: `watch`, `inotify`
-
-### Text Processing Essentials
-- **Search Text**: `grep`, `egrep`, `fgrep`
-- **Pattern Scanning**: `awk` basics
-- **Stream Editing**: `sed` fundamentals
-- **Text Extraction**: `cut`, `tr`
-- **Sorting & Organizing**: `sort`, `uniq`
-- **File Viewing**: `head`, `tail`, `less`, `more`
-
-### Pattern Matching
+## 📚 **What You'll Learn Today**
+- grep, sed, awk fundamentals
 - Regular expressions basics
-- Wildcards and globbing
-- Case-insensitive searching
-- Multi-file operations
+- Text filtering and transformation
+- Log analysis techniques
 
-## Cybersecurity Applications
-Text processing is essential for:
-- **Log Analysis**: Parsing security logs for threats
-- **Data Extraction**: Pulling IOCs from reports
-- **Configuration Management**: Modifying security configs
-- **Report Generation**: Creating security summaries
+## 🛠️ **Today's Tools to Master**
+```bash
+grep, egrep, sed, awk, cut, sort, uniq, tr
+```
 
-## Advanced Techniques
-- Combining multiple text processing tools
-- Processing large files efficiently
-- Real-time log monitoring
-- Creating custom filters
+## 📖 **Learning Path** (4-5 hours)
 
-## Practice Goals
-- Build a log analysis toolkit
-- Create scripts for IOC extraction
-- Practice efficient text processing workflows
-- Develop file monitoring capabilities
+### **Step 1**: Grep and Pattern Matching (90 min)
+```bash
+./exercises/grep_patterns.sh
+```
+
+### **Step 2**: Sed Text Replacement (90 min)
+```bash
+./exercises/sed_basics.sh
+```
+
+### **Step 3**: Awk Field Processing (90 min)
+```bash
+./exercises/awk_basics.sh
+```
+
+### **Step 4**: Build a Log Analyzer (120 min)
+```bash
+./scripts/advanced_log_analyzer.sh
+```
+
+## ✅ **Daily Challenge**
+Create an IP extractor:
+```bash
+#!/bin/bash
+# Extract all IP addresses from access logs
+grep -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' /var/log/apache2/access.log | \
+awk '{print $1}' | sort | uniq -c | sort -nr
+```
+
+## 🎓 **Success Criteria**
+- [ ] Can use grep with patterns
+- [ ] Can replace text with sed
+- [ ] Can process fields with awk
+- [ ] Built a text processing tool
+
+## 🚀 **Tomorrow Preview**
+Day 7: Arrays and advanced data structures!
