@@ -12,249 +12,203 @@ pause() {
     echo
 }
 
-echo "=== PART 1: Basic grep Patterns ==="
-echo
-
-# Create sample text
-cat > sample_text.txt << 'EOF'
-The quick brown fox jumps over the lazy dog
-Linux system administration
-Email: admin@example.com
-Phone: 555-123-4567
-IP Address: 192.168.1.100
-Another email: user@domain.org
-Date: 2025-08-01
-Time: 14:30:25
-URL: https://www.example.com
-Error: File not found
-Warning: Low disk space
-Info: System startup complete
+# Create sample text for regex practice
+cat > emails.txt << 'EOF'
+john.doe@example.com
+admin@company.org
+user123@test-site.net
+invalid.email@
+@missinguser.com
+support@help.co.uk
+sales@business.info
 EOF
 
-echo "Sample text file:"
-cat sample_text.txt
+cat > access.log << 'EOF'
+192.168.1.100 - - [01/Jan/2024:10:00:01] "GET /index.html" 200
+10.0.0.55 - - [01/Jan/2024:10:00:15] "POST /login" 401
+172.16.0.10 - - [01/Jan/2024:10:01:30] "GET /admin" 403
+192.168.1.100 - - [01/Jan/2024:10:02:45] "GET /data.json" 200
+203.0.113.5 - - [01/Jan/2024:10:03:12] "GET /api/users" 500
+192.168.1.101 - - [01/Jan/2024:10:05:23] "DELETE /files" 200
+EOF
+
+echo "Sample data files created:"
+echo "emails.txt:"
+cat emails.txt
+echo
+echo "access.log:"
+cat access.log
 echo
 
-echo "Search for lines containing 'Email':"
-echo "Command: grep 'Email' sample_text.txt"
-pause
-
-grep 'Email' sample_text.txt
+echo "=== PART 1: Basic Pattern Matching ==="
 echo
 
-echo "Case-insensitive search for 'error':"
-echo "Command: grep -i 'error' sample_text.txt"
+echo "Find lines containing 'example':"
+echo "Command: grep 'example' emails.txt"
 pause
 
-grep -i 'error' sample_text.txt
+grep 'example' emails.txt
+echo
+
+echo "Case-insensitive search:"
+echo "Command: grep -i 'EXAMPLE' emails.txt"
+pause
+
+grep -i 'EXAMPLE' emails.txt
+echo
+
+echo "Invert match (lines NOT containing pattern):"
+echo "Command: grep -v '@' emails.txt"
+pause
+
+grep -v '@' emails.txt
 echo
 
 echo "=== PART 2: Character Classes ==="
 echo
 
-echo "Find lines with digits:"
-echo "Command: grep '[0-9]' sample_text.txt"
+echo "Find emails with numbers:"
+echo "Command: grep '[0-9]' emails.txt"
 pause
 
-grep '[0-9]' sample_text.txt
+grep '[0-9]' emails.txt
 echo
 
-echo "Find lines starting with capital letters:"
-echo "Command: grep '^[A-Z]' sample_text.txt"
+echo "Find lines starting with 'a' or 's':"
+echo "Command: grep '^[as]' emails.txt"
 pause
 
-grep '^[A-Z]' sample_text.txt
+grep '^[as]' emails.txt
 echo
 
-echo "Find lines ending with numbers:"
-echo "Command: grep '[0-9]$' sample_text.txt"
+echo "Find lines ending with '.com':"
+echo "Command: grep '\.com$' emails.txt"
 pause
 
-grep '[0-9]$' sample_text.txt
+grep '\.com$' emails.txt
 echo
 
 echo "=== PART 3: Special Characters ==="
 echo
 
-echo "Find email addresses (contains @):"
-echo "Command: grep '@' sample_text.txt"
+echo "Find IPs starting with 192:"
+echo "Command: grep '^192' access.log"
 pause
 
-grep '@' sample_text.txt
+grep '^192' access.log
 echo
 
-echo "Find IP addresses (pattern with dots):"
-echo "Command: grep '[0-9]\\+\\.[0-9]\\+\\.[0-9]\\+\\.[0-9]\\+' sample_text.txt"
+echo "Find GET requests:"
+echo "Command: grep 'GET' access.log"
 pause
 
-grep '[0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+' sample_text.txt
+grep 'GET' access.log
 echo
 
-echo "Find phone numbers (pattern with dashes):"
-echo "Command: grep '[0-9]\\+-[0-9]\\+-[0-9]\\+' sample_text.txt"
+echo "Find error codes (4xx or 5xx):"
+echo "Command: grep '[45][0-9][0-9]' access.log"
 pause
 
-grep '[0-9]\+-[0-9]\+-[0-9]\+' sample_text.txt
+grep '[45][0-9][0-9]' access.log
 echo
 
 echo "=== PART 4: Extended Regular Expressions ==="
 echo
 
-echo "Use -E for extended regex (or egrep):"
-echo "Find email addresses with better pattern:"
-echo "Command: grep -E '[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]+' sample_text.txt"
+echo "Find emails with .com OR .org:"
+echo "Command: grep -E '\.(com|org)' emails.txt"
 pause
 
-grep -E '[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]+' sample_text.txt
+grep -E '\.(com|org)' emails.txt
 echo
 
-echo "Find URLs starting with http:"
-echo "Command: grep -E 'https?://[a-zA-Z0-9.-]+' sample_text.txt"
+echo "Find valid email format (basic):"
+echo "Command: grep -E '^[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$' emails.txt"
 pause
 
-grep -E 'https?://[a-zA-Z0-9.-]+' sample_text.txt
+grep -E '^[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$' emails.txt
 echo
 
-echo "Find dates in YYYY-MM-DD format:"
-echo "Command: grep -E '[0-9]{4}-[0-9]{2}-[0-9]{2}' sample_text.txt"
+echo "Find private IP addresses:"
+echo "Command: grep -E '^(192\.168|10\.|172\.16)' access.log"
 pause
 
-grep -E '[0-9]{4}-[0-9]{2}-[0-9]{2}' sample_text.txt
+grep -E '^(192\.168|10\.|172\.16)' access.log
 echo
 
-echo "=== PART 5: Multiple Patterns ==="
+echo "=== PART 5: Practical Examples ==="
 echo
 
-echo "Find lines with 'Error' OR 'Warning':"
-echo "Command: grep -E '(Error|Warning)' sample_text.txt"
+echo "Count successful requests (200 status):"
+echo "Command: grep ' 200$' access.log | wc -l"
 pause
 
-grep -E '(Error|Warning)' sample_text.txt
+grep ' 200$' access.log | wc -l
 echo
 
-echo "Find lines NOT containing numbers:"
-echo "Command: grep -v '[0-9]' sample_text.txt"
+echo "Extract just the IP addresses:"
+echo "Command: grep -o '^[0-9.]*' access.log"
 pause
 
-grep -v '[0-9]' sample_text.txt
+grep -o '^[0-9.]*' access.log
 echo
 
-echo "=== PART 6: Log File Analysis ==="
+echo "Find unique IP addresses:"
+echo "Command: grep -o '^[0-9.]*' access.log | sort | uniq"
+pause
+
+grep -o '^[0-9.]*' access.log | sort | uniq
 echo
 
-# Create realistic log file
-cat > system.log << 'EOF'
-2025-08-01 10:15:30 INFO System startup initiated
-2025-08-01 10:15:32 INFO Loading configuration files
-2025-08-01 10:15:35 WARNING Configuration file /etc/app.conf not found
-2025-08-01 10:15:36 INFO Using default configuration
-2025-08-01 10:16:00 INFO Service apache2 started successfully
-2025-08-01 10:16:05 ERROR Failed to connect to database server 192.168.1.50
-2025-08-01 10:16:06 INFO Retrying database connection
-2025-08-01 10:16:10 INFO Database connection established
-2025-08-01 10:17:15 WARNING High memory usage detected: 85%
-2025-08-01 10:18:30 ERROR User authentication failed for admin@company.com
-2025-08-01 10:19:45 INFO Backup process completed successfully
-2025-08-01 10:20:00 ERROR Disk space critical on /var/log partition
+echo "=== PART 6: Advanced Patterns ==="
+echo
+
+# Create system data
+cat > system_info.txt << 'EOF'
+CPU: Intel Core i7-9700K 3.60GHz
+Memory: 16GB DDR4
+Disk: SSD 512GB
+Network: Ethernet 1Gbps
+Temperature: CPU 45C GPU 38C
+Load: 1.25 0.89 0.67
 EOF
 
-echo "System log file:"
-cat system.log
+echo "System information file:"
+cat system_info.txt
 echo
 
-echo "Find all ERROR messages:"
-echo "Command: grep 'ERROR' system.log"
+echo "Extract numbers with units:"
+echo "Command: grep -o '[0-9]*[A-Z][A-Za-z]*' system_info.txt"
 pause
 
-grep 'ERROR' system.log
+grep -o '[0-9]*[A-Z][A-Za-z]*' system_info.txt
 echo
 
-echo "Find log entries from 10:16:"
-echo "Command: grep '10:16' system.log"
+echo "Find temperature readings:"
+echo "Command: grep -o '[0-9]*C' system_info.txt"
 pause
 
-grep '10:16' system.log
+grep -o '[0-9]*C' system_info.txt
 echo
 
-echo "Find entries with email addresses:"
-echo "Command: grep -E '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}' system.log"
+echo "Extract load averages:"
+echo "Command: grep -o '[0-9]\.[0-9]*' system_info.txt"
 pause
 
-grep -E '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}' system.log
+grep -o '[0-9]\.[0-9]*' system_info.txt
 echo
 
-echo "Find entries with IP addresses:"
-echo "Command: grep -E '([0-9]{1,3}\\.){3}[0-9]{1,3}' system.log"
-pause
+# Clean up
+rm -f emails.txt access.log system_info.txt
 
-grep -E '([0-9]{1,3}\.){3}[0-9]{1,3}' system.log
-echo
-
-echo "Count error messages:"
-echo "Command: grep -c 'ERROR' system.log"
-pause
-
-grep -c 'ERROR' system.log
-echo
-
-echo "Show line numbers for warnings:"
-echo "Command: grep -n 'WARNING' system.log"
-pause
-
-grep -n 'WARNING' system.log
-echo
-
-echo "=== PART 7: Practical Security Analysis ==="
-echo
-
-# Create security log
-cat > security.log << 'EOF'
-Aug 01 10:15:01 server sshd[1234]: Accepted password for admin from 192.168.1.10
-Aug 01 10:16:15 server sshd[1235]: Failed password for root from 203.0.113.5
-Aug 01 10:16:20 server sshd[1236]: Failed password for root from 203.0.113.5
-Aug 01 10:16:25 server sshd[1237]: Failed password for admin from 203.0.113.5
-Aug 01 10:17:30 server sudo[1238]: admin : TTY=pts/0 ; PWD=/home/admin ; USER=root
-Aug 01 10:18:45 server sshd[1239]: Accepted password for user1 from 192.168.1.20
-Aug 01 10:19:10 server sshd[1240]: Failed password for guest from 198.51.100.1
-EOF
-
-echo "Security log file:"
-cat security.log
-echo
-
-echo "Find failed login attempts:"
-echo "Command: grep 'Failed password' security.log"
-pause
-
-grep 'Failed password' security.log
-echo
-
-echo "Find external IP addresses (not 192.168.x.x):"
-echo "Command: grep -E 'from [^1][0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+' security.log"
-pause
-
-grep -E 'from [^1][0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' security.log
-echo
-
-echo "Find sudo usage:"
-echo "Command: grep 'sudo' security.log"
-pause
-
-grep 'sudo' security.log
-echo
-
-# Cleanup
-rm -f sample_text.txt system.log security.log
-
-echo
 echo "What you learned:"
-echo "   - Basic patterns: grep 'pattern' file"
-echo "   - Character classes: [0-9], [A-Z], [a-z]"
-echo "   - Anchors: ^ (start), $ (end)"
-echo "   - Extended regex: -E flag"
-echo "   - Quantifiers: +, *, {n}"
-echo "   - Alternation: (pattern1|pattern2)"
-echo "   - Email and IP address patterns"
-echo "   - Log analysis techniques"
+echo "   - Basic pattern matching with grep"
+echo "   - Character classes [a-z] [0-9]"
+echo "   - Anchors ^ (start) and $ (end)"
+echo "   - Extended regex with -E"
+echo "   - Alternation with | (pipe)"
+echo "   - Quantifiers * + ? {n,m}"
+echo "   - Extracting patterns with -o"
+echo "   - Combining grep with other tools"
 echo
-echo "Next: Build a comprehensive log analyzer"
+echo "Next: Complete the daily challenge"

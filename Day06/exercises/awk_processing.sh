@@ -3,8 +3,8 @@
 # Day 6 Exercise 2: awk Processing
 # Learning: Pattern matching and field processing
 
-echo "Day 6: awk Field Processing"
-echo "==========================="
+echo "Day 6: awk Pattern Processing"
+echo "============================="
 
 pause() {
     echo
@@ -12,179 +12,152 @@ pause() {
     echo
 }
 
-echo "=== PART 1: Basic Field Processing ==="
-echo
-echo "awk processes text by fields (columns)"
-echo "Default field separator is space/tab"
-echo
-
-# Create sample data
-cat > users.txt << 'EOF'
-john smith 25 admin
-jane doe 30 user
-bob johnson 35 admin
-alice brown 28 user
-charlie wilson 42 manager
+# Create sample log data
+cat > system.log << 'EOF'
+2024-01-01 10:00:01 INFO apache2 started successfully
+2024-01-01 10:00:15 WARNING high memory usage detected 85%
+2024-01-01 10:01:30 ERROR database connection failed
+2024-01-01 10:02:45 INFO backup process completed
+2024-01-01 10:03:12 ERROR authentication failed for user admin
+2024-01-01 10:05:23 WARNING disk space low on /var 92%
+2024-01-01 10:07:11 INFO user login successful for john
 EOF
 
-echo "Sample user data:"
-cat users.txt
+echo "Sample log file created:"
+cat system.log
 echo
 
-echo "Print first field (first names):"
-echo "Command: awk '{print \$1}' users.txt"
+echo "=== PART 1: Field Processing ==="
+echo
+
+echo "Print just the time (field 2):"
+echo "Command: awk '{print \$2}' system.log"
 pause
 
-awk '{print $1}' users.txt
+awk '{print $2}' system.log
 echo
 
-echo "Print last field (roles):"
-echo "Command: awk '{print \$NF}' users.txt"
+echo "Print time and log level:"
+echo "Command: awk '{print \$2, \$3}' system.log"
 pause
 
-awk '{print $NF}' users.txt
+awk '{print $2, $3}' system.log
 echo
 
-echo "=== PART 2: Custom Output Format ==="
-echo
-echo "Format output with custom text:"
-echo "Command: awk '{print \"Name: \" \$1 \" \" \$2 \", Age: \" \$3}' users.txt"
+echo "Print with custom formatting:"
+echo "Command: awk '{print \"Time:\" \$2 \" Level:\" \$3}' system.log"
 pause
 
-awk '{print "Name: " $1 " " $2 ", Age: " $3}' users.txt
+awk '{print "Time:" $2 " Level:" $3}' system.log
 echo
 
-echo "=== PART 3: Pattern Matching ==="
+echo "=== PART 2: Pattern Matching ==="
 echo
-echo "Show only admin users:"
-echo "Command: awk '/admin/ {print \$1 \" \" \$2}' users.txt"
+
+echo "Show only ERROR entries:"
+echo "Command: awk '/ERROR/ {print}' system.log"
 pause
 
-awk '/admin/ {print $1 " " $2}' users.txt
+awk '/ERROR/ {print}' system.log
 echo
 
-echo "Show users over 30:"
-echo "Command: awk '\$3 > 30 {print \$1 \" \" \$2 \" is \" \$3}' users.txt"
+echo "Show WARNING and ERROR entries:"
+echo "Command: awk '/WARNING|ERROR/ {print}' system.log"
 pause
 
-awk '$3 > 30 {print $1 " " $2 " is " $3}' users.txt
+awk '/WARNING|ERROR/ {print}' system.log
+echo
+
+echo "=== PART 3: Field-based Conditions ==="
+echo
+
+echo "Show entries where field 3 is ERROR:"
+echo "Command: awk '\$3 == \"ERROR\" {print}' system.log"
+pause
+
+awk '$3 == "ERROR" {print}' system.log
+echo
+
+echo "Show entries from 10:02 onwards:"
+echo "Command: awk '\$2 >= \"10:02:00\" {print}' system.log"
+pause
+
+awk '$2 >= "10:02:00" {print}' system.log
 echo
 
 echo "=== PART 4: Built-in Variables ==="
 echo
-echo "NR = Number of Records (line number)"
-echo "NF = Number of Fields in current record"
-echo
 
 echo "Add line numbers:"
-echo "Command: awk '{print NR \": \" \$0}' users.txt"
+echo "Command: awk '{print NR \": \" \$0}' system.log"
 pause
 
-awk '{print NR ": " $0}' users.txt
+awk '{print NR ": " $0}' system.log
 echo
 
-echo "Show records with exactly 4 fields:"
-echo "Command: awk 'NF == 4 {print \"Line \" NR \": \" \$0}' users.txt"
+echo "Show number of fields per line:"
+echo "Command: awk '{print \"Line \" NR \" has \" NF \" fields\"}' system.log"
 pause
 
-awk 'NF == 4 {print "Line " NR ": " $0}' users.txt
+awk '{print "Line " NR " has " NF " fields"}' system.log
 echo
 
-echo "=== PART 5: Field Separators ==="
+echo "=== PART 5: Calculations and Summaries ==="
 echo
 
-# Create CSV data
-cat > data.csv << 'EOF'
-name,age,city,salary
-John,25,NYC,50000
-Jane,30,LA,60000
-Bob,35,Chicago,55000
-Alice,28,Boston,58000
+# Create numerical data
+cat > sales.txt << 'EOF'
+apple 50 2.50
+banana 30 1.20
+orange 25 3.00
+grape 40 4.50
 EOF
 
-echo "CSV data:"
-cat data.csv
+echo "Sample sales data:"
+cat sales.txt
 echo
 
-echo "Process CSV with comma separator:"
-echo "Command: awk -F',' '{print \$1 \" earns \$\" \$4}' data.csv"
+echo "Calculate total value (quantity * price):"
+echo "Command: awk '{print \$1, \$2 * \$3}' sales.txt"
 pause
 
-awk -F',' '{print $1 " earns $" $4}' data.csv
+awk '{print $1, $2 * $3}' sales.txt
 echo
 
-echo "Skip header and process data:"
-echo "Command: awk -F',' 'NR > 1 {print \$1 \" lives in \" \$3}' data.csv"
+echo "Sum all quantities:"
+echo "Command: awk '{total += \$2} END {print \"Total quantity:\" total}' sales.txt"
 pause
 
-awk -F',' 'NR > 1 {print $1 " lives in " $3}' data.csv
+awk '{total += $2} END {print "Total quantity:" total}' sales.txt
 echo
 
-echo "=== PART 6: Mathematical Operations ==="
-echo
-
-echo "Calculate average age:"
-echo "Command: awk '{sum += \$2; count++} END {print \"Average age: \" sum/count}' users.txt"
+echo "Calculate average price:"
+echo "Command: awk '{sum += \$3; count++} END {print \"Average price:\" sum/count}' sales.txt"
 pause
 
-awk '{sum += $3; count++} END {print "Average age: " sum/count}' users.txt
+awk '{sum += $3; count++} END {print "Average price:" sum/count}' sales.txt
 echo
 
-echo "Find highest salary in CSV:"
-echo "Command: awk -F',' 'NR > 1 {if(\$4 > max) max = \$4} END {print \"Highest salary: \$\" max}' data.csv"
+echo "=== PART 6: Advanced Processing ==="
+echo
+
+echo "Create summary report:"
+echo "Command: awk 'BEGIN {print \"SALES REPORT\"} {total += \$2*\$3; print \$1 \": \" \$2*\$3} END {print \"TOTAL: \" total}' sales.txt"
 pause
 
-awk -F',' 'NR > 1 {if($4 > max) max = $4} END {print "Highest salary: $" max}' data.csv
+awk 'BEGIN {print "SALES REPORT"} {total += $2*$3; print $1 ": " $2*$3} END {print "TOTAL: " total}' sales.txt
 echo
 
-echo "=== PART 7: Log Processing Example ==="
-echo
+# Clean up
+rm -f system.log sales.txt
 
-# Create log file
-cat > access.log << 'EOF'
-192.168.1.100 - - [01/Aug/2025:10:15:30] "GET /index.html" 200 1024
-192.168.1.101 - - [01/Aug/2025:10:16:45] "POST /login" 200 512
-192.168.1.102 - - [01/Aug/2025:10:17:20] "GET /admin" 404 256
-192.168.1.100 - - [01/Aug/2025:10:18:15] "GET /data.json" 200 2048
-192.168.1.103 - - [01/Aug/2025:10:19:30] "GET /index.html" 200 1024
-EOF
-
-echo "Web server access log:"
-cat access.log
-echo
-
-echo "Extract IP addresses:"
-echo "Command: awk '{print \$1}' access.log"
-pause
-
-awk '{print $1}' access.log
-echo
-
-echo "Show 404 errors:"
-echo "Command: awk '/404/ {print \$1 \" requested \" \$7}' access.log"
-pause
-
-awk '/404/ {print $1 " requested " $7}' access.log
-echo
-
-echo "Count requests by IP:"
-echo "Command: awk '{ip[\$1]++} END {for(i in ip) print i \": \" ip[i]}' access.log"
-pause
-
-awk '{ip[$1]++} END {for(i in ip) print i ": " ip[i]}' access.log
-echo
-
-# Cleanup
-rm -f users.txt data.csv access.log
-
-echo
 echo "What you learned:"
-echo "   - Field processing: $1, $2, $NF"
-echo "   - Pattern matching: /pattern/ {action}"
-echo "   - Conditions: $3 > 30 {action}"
-echo "   - Built-in variables: NR, NF"
-echo "   - Field separators: -F','"
-echo "   - Mathematical operations and arrays"
-echo "   - Log file analysis"
+echo "   - \$1, \$2, \$3 for field access"
+echo "   - Pattern matching with /pattern/"
+echo "   - Field-based conditions"
+echo "   - NR (line number) and NF (field count)"
+echo "   - BEGIN and END blocks"
+echo "   - Mathematical operations"
+echo "   - Variable accumulation"
 echo
-echo "Next: Learn regular expressions"
+echo "Next: Learn regular expressions with grep"
