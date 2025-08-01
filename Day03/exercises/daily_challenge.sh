@@ -17,15 +17,15 @@ fi
 echo
 echo "Security File Check:"
 if [ -f "/etc/passwd" ]; then
-    echo "✓ Password file exists"
+    echo "[OK] Password file exists"
 else
-    echo "✗ Password file missing"
+    echo "[FAIL] Password file missing"
 fi
 
 if [ -f "/etc/shadow" ]; then
-    echo "✓ Shadow file exists"
+    echo "[OK] Shadow file exists"
 else
-    echo "✗ Shadow file missing"
+    echo "[FAIL] Shadow file missing"
 fi
 
 # Check SSH configuration

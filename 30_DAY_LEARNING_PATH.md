@@ -1,6 +1,6 @@
-# 🚀 **30-Day Bash Mastery: Zero to Hero Complete Path**
+# 30-Day Bash Mastery: Zero to Hero Complete Path
 
-## 📋 **Learning Philosophy**
+## Learning Philosophy
 - **Focus on fundamentals first** - Solid foundation before complexity
 - **Learn by doing** - Every concept has hands-on practice
 - **Progressive complexity** - Each day builds on previous knowledge
@@ -8,7 +8,7 @@
 
 ---
 
-## 🏁 **Phase 1: Foundation (Days 1-5) - Beginner**
+## Phase 1: Foundation (Days 1-5) - Beginner
 
 ### **Day 1: Your First Steps**
 **Goal**: Master basic commands
@@ -44,7 +44,7 @@
 
 ---
 
-## ⚡ **Phase 2: Core Skills (Days 6-10) - Intermediate**
+## Phase 2: Core Skills (Days 6-10) - Intermediate
 
 ### **Day 6: Text Processing** 
 **Goal**: Master data extraction
