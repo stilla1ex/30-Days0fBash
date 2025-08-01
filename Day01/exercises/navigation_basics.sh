@@ -92,9 +92,9 @@ echo "Command: ls /usr/bin | head -5"
 ls /usr/bin | head -5
 echo
 
-echo "✅ Navigation Basics Complete!"
+echo "[OK] Navigation Basics Complete!"
 echo
-echo "🎓 What you learned:"
+echo "LEARNED: What you learned:"
 echo "   • pwd - shows current directory"
 echo "   • ls - lists files and directories"
 echo "   • ls -l - detailed listing"

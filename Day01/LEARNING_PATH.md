@@ -2,9 +2,9 @@
 
 ## Phase 1: Fundamentals First (Day 1)
 ### What to Include:
-- ✅ **Interactive Exercises**: Step-by-step command practice
-- ✅ **Command Demonstrations**: Simple, educational scripts that show single concepts
-- ✅ **Guided Practice**: Scripts that prompt user to try commands
+- [OK] **Interactive Exercises**: Step-by-step command practice
+- [OK] **Command Demonstrations**: Simple, educational scripts that show single concepts
+- [OK] **Guided Practice**: Scripts that prompt user to try commands
 
 ### What to Avoid:
 - ❌ **Complex Utility Scripts**: Multi-function tools that do "magic"
@@ -13,27 +13,27 @@
 
 ## Current Assessment of Your Day 1:
 
-### ✅ Good Practices:
+### Good Practices:
 1. **`basic_commands.sh`** - Perfect! Educational, demonstrates commands step-by-step
 2. **`exercises/`** folder - Great approach for guided learning
 3. **Commented code** - Excellent for learning
 
-### ⚠️ Concerns:
+### Concerns:
 1. **`setup_environment.sh`** - Too complex for Day 1
    - 166 lines with advanced error handling
    - Multiple functions and complex logic
    - Should be moved to Day 3-5
 
-### 📋 Recommended Changes:
+### Recommended Changes:
 
 #### Move to Later Days:
 - `scripts/setup_environment.sh` → **Day 3 or 4**
 - Complex utility scripts → **Day 5+**
 
 #### Keep for Day 1:
-- `exercises/basic_commands.sh` ✅
-- `exercises/file_operations.sh` ✅
-- Simple demonstration scripts ✅
+- `exercises/basic_commands.sh` [OK]
+- `exercises/file_operations.sh` [OK]
+- Simple demonstration scripts [OK]
 
 #### Create Simple Day 1 Alternative:
 ```bash

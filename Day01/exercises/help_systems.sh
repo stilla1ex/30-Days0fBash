@@ -20,7 +20,7 @@ echo "This opens the manual for the 'ls' command"
 echo "Use 'q' to quit, arrow keys to scroll"
 pause
 
-echo "💡 The manual will open. Here's what to look for:"
+echo "TIP: The manual will open. Here's what to look for:"
 echo "   • NAME - what the command does"
 echo "   • SYNOPSIS - how to use it"
 echo "   • DESCRIPTION - detailed explanation"
@@ -107,7 +107,7 @@ pause
 echo "System info: $(uname -a)"
 echo
 
-echo "🎓 What you learned:"
+echo "LEARNED: What you learned:"
 echo "   • man command - full manual pages"
 echo "   • command --help - quick help"
 echo "   • which command - find command location"
@@ -118,7 +118,7 @@ echo "   • whoami - your username"
 echo "   • date - current date and time"
 echo "   • uname -a - system information"
 echo
-echo "💡 Remember: When in doubt, check the manual!"
+echo "TIP: Remember: When in doubt, check the manual!"
 echo "   The man pages are your best friend."
 echo
 echo "Next: Run './exercises/daily_challenge.sh'"

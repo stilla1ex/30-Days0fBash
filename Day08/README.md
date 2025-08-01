@@ -1,20 +1,20 @@
 # Day 8: Error Handling and Debugging
 
-## 🎯 **Learning Goal**
+## Learning Goal
 Make your scripts bulletproof with proper error handling and debugging.
 
-## 📚 **What You'll Learn Today**
+## What You'll Learn Today
 - Exit codes and error detection
 - Try/catch equivalents in bash
 - Debugging techniques
 - Logging and error reporting
 
-## 🛠️ **Today's Concepts to Master**
+## Today's Concepts to Master
 ```bash
 set -e, set -u, trap, $?, ||, &&, 2>&1, logger
 ```
 
-## 📖 **Learning Path** (3-4 hours)
+## Learning Path (3-4 hours)
 
 ### **Step 1**: Exit Codes and Detection (60 min)
 ```bash
@@ -36,7 +36,7 @@ set -e, set -u, trap, $?, ||, &&, 2>&1, logger
 ./scripts/bulletproof_script.sh
 ```
 
-## ✅ **Daily Challenge**
+## Daily Challenge
 Create a safe file processor:
 ```bash
 #!/bin/bash
@@ -68,11 +68,11 @@ for file in "$@"; do
 done
 ```
 
-## 🎓 **Success Criteria**
+## Success Criteria
 - [ ] Can handle errors gracefully
 - [ ] Understand exit codes and trapping
 - [ ] Can debug script problems
 - [ ] Built a production-ready script
 
-## 🚀 **Tomorrow Preview**
+## Tomorrow Preview
 Day 9: Command-line argument processing!
