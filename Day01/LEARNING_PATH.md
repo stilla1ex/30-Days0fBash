@@ -7,9 +7,9 @@
 - [OK] **Guided Practice**: Scripts that prompt user to try commands
 
 ### What to Avoid:
-- ❌ **Complex Utility Scripts**: Multi-function tools that do "magic"
-- ❌ **Production-Ready Scripts**: Anything students might just run without learning
-- ❌ **Advanced Error Handling**: Focus on command basics first
+- [NO] **Complex Utility Scripts**: Multi-function tools that do "magic"
+- [NO] **Production-Ready Scripts**: Anything students might just run without learning
+- [NO] **Advanced Error Handling**: Focus on command basics first
 
 ## Current Assessment of Your Day 1:
 
