@@ -24,7 +24,7 @@ create_directories() {
     )
     
     for dir in "${dirs[@]}"; do
-        eval "mkdir -p $dir"
+        mkdir -p "${dir/#~/$HOME}"
         if [[ $? -eq 0 ]]; then
             echo "✓ Created: $dir"
         else
