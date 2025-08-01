@@ -9,11 +9,6 @@ Master text processing tools essential for data manipulation and system administ
 - grep with regular expressions
 - Text parsing and extraction techniques
 
-## Today's Commands to Master
-```bash
-sed, awk, grep, cut, sort, uniq, tr, wc
-```
-
 ## Exercises
 1. `sed_basics.sh` - Stream editing fundamentals
 2. `awk_processing.sh` - Pattern matching and field processing
@@ -28,16 +23,16 @@ sed, awk, grep, cut, sort, uniq, tr, wc
 
 ## Today's Learning Path
 
-### Step 1: sed Fundamentals (45 min)
-Learn stream editing and text substitution
+### Step 1: sed Basics (60 min)
+Learn stream editing for text transformation
 
 ### Step 2: awk Processing (60 min)
-Master field-based text processing
+Master pattern matching and field processing
 
 ### Step 3: Regular Expressions (45 min)
-Practice pattern matching
+Practice pattern matching with grep
 
-### Step 4: Log Analysis Challenge (45 min)
+### Step 4: Log Analysis Challenge (60 min)
 Build a comprehensive log analyzer
 
 ## Success Milestone
