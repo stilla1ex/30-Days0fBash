@@ -29,7 +29,7 @@ echo "Command: which nmap"
 if which nmap >/dev/null 2>&1; then
     echo "[OK] nmap is installed"
 else
-    echo "❌ nmap is not installed or not in PATH"
+    echo "  nmap is not installed or not in PATH"
 fi
 echo
 
@@ -41,7 +41,7 @@ if [ -f "$test_file" ]; then
     echo "[OK] File exists"
     echo "File size: $(wc -l < $test_file) lines"
 else
-    echo "❌ File does not exist"
+    echo "  File does not exist"
 fi
 echo
 
@@ -53,8 +53,8 @@ mkdir -p test_directory && echo "[OK] Directory created or already exists"
 echo
 
 echo "LEARNED: Key Learning Points:"
-echo "• Exit code 0 = success"
-echo "• Exit code non-zero = failure" 
-echo "• Use \$? to check the last command's exit code"
-echo "• Always check if commands succeed in real scripts"
-echo "• Use && to run commands only if previous one succeeds"
+echo "- Exit code 0 = success"
+echo "- Exit code non-zero = failure" 
+echo "- Use \$? to check the last command's exit code"
+echo "- Always check if commands succeed in real scripts"
+echo "- Use && to run commands only if previous one succeeds"

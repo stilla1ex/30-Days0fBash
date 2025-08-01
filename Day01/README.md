@@ -42,11 +42,11 @@ ls, cd, pwd, mkdir, touch, cat, cp, mv, rm, echo, man, which, whoami, date
 ```
 
 ## Success Criteria
-- [ ] Can navigate directories using cd, ls, pwd
-- [ ] Can create, copy, move, and delete files
-- [ ] Understand command syntax: command [options] [arguments]
-- [ ] Know how to get help with man and --help
-- [ ] Completed daily challenge successfully
+- Can navigate directories using cd, ls, pwd
+- Can create, copy, move, and delete files
+- Understand command syntax: command [options] [arguments]
+- Know how to get help with man and --help
+- Completed daily challenge successfully
 
 ## Tomorrow Preview
 Day 2: Variables - Making scripts remember information!
