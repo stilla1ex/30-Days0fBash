@@ -1,106 +1,90 @@
-# Day 1: Foundation - Basic Commands & Environment
+# Day 1: Your First Steps - Command Line Basics
 
-## 🎯 Learning Objectives
-By the end of Day 1, you will be able to:
-- Navigate the Linux file system confidently
-- Use essential commands for cybersecurity tasks
-- Understand command structure and syntax
-- Set up useful aliases for security work
-- Recognize why bash is crucial for cybersecurity professionals
+## 🎯 **Learning Goal**
+Master the essential commands you'll use every day. By the end of today, you'll navigate Linux like a pro.
 
-## 📚 Topics Covered
+## 📚 **What You'll Learn Today**
+- Navigate directories confidently
+- Create, view, and manage files
+- Understand command structure
+- Use help systems effectively
 
-### 1. Essential Navigation Commands
-- **Directory Navigation**: `ls`, `cd`, `pwd`, `find`
-- **File Operations**: `cat`, `cp`, `mv`, `rm`, `touch`, `mkdir`
-- **Information Gathering**: `echo`, `man`, `which`, `type`, `file`
-- **System Information**: `whoami`, `date`, `uname`
+## 🛠️ **Today's Commands to Master**
+```bash
+ls, cd, pwd, mkdir, touch, cat, cp, mv, rm, echo, man, which
+```
 
-### 2. Command Structure & Syntax
-- Basic syntax: `command [options] [arguments]`
-- Using flags and options (`-l`, `--help`)
-- Combining commands with pipes (`|`)
-- Redirection operators (`>`, `>>`)
-- Understanding exit codes and error handling
+## 📖 **Learning Path** (2-3 hours)
 
-### 3. Cybersecurity Context
-- Why bash is essential for security professionals
-- File system security fundamentals
-- Log file locations and analysis basics
-- Common directories for security tools
+### **Step 1**: Run the Welcome Script (5 min)
+```bash
+./scripts/welcome.sh
+```
 
-### 4. Environment Configuration
-- Understanding shell environment variables
-- Creating temporary aliases for efficiency
-- Basic terminal customization
-- PATH variable and command execution
+### **Step 2**: Interactive Command Practice (45 min)
+```bash
+./exercises/command_practice.sh
+```
 
-## 🛠️ Hands-On Exercises
+### **Step 3**: File Operations Workshop (30 min)
+```bash
+./exercises/file_operations.sh
+```
 
-### Practice Scripts (Interactive Learning)
-1. **Basic Commands Practice** (`exercises/basic_commands.sh`)
-   - Step-by-step command demonstration
-   - File system navigation and operations
-   - System information gathering
+### **Step 4**: Command Structure & Help (30 min)
+```bash
+./exercises/basic_commands.sh
+```
 
-2. **File Operations Mastery** (`exercises/file_operations.sh`) 
-   - Creating cybersecurity workspace structure
-   - File manipulation and organization
-   - Working with log files and directories
+### **Step 5**: Error Handling Basics (20 min)
+```bash
+./exercises/basic_error_handling.sh
+```
 
-3. **Environment Configuration** (`exercises/environment_setup.sh`)
-   - Setting up useful aliases
-   - Understanding environment variables
-   - Basic terminal customization
+## ✅ **Daily Challenge**
+Create a directory structure for a security project:
+```bash
+mkdir -p security_project/{logs,tools,reports,configs}
+echo "Project started on $(date)" > security_project/README.txt
+```
 
-### Demonstration Scripts
-- **Welcome Script** (`scripts/welcome.sh`) - Introduction to scripting concepts
+## 🎓 **Success Criteria**
+- [ ] Can navigate directories without thinking
+- [ ] Can create/copy/move/delete files confidently
+- [ ] Understand command syntax: `command [options] [arguments]`
+- [ ] Know how to get help with `man` and `--help`
 
-## 📖 Learning Path
-
-### Start Here:
-1. Run `scripts/welcome.sh` for a gentle introduction
-2. Work through `exercises/basic_commands.sh` step by step
-3. Practice with `exercises/file_operations.sh`
-4. Configure your environment with `exercises/environment_setup.sh`
-
-### 💡 Key Concepts to Master:
-- **File permissions** and security implications
-- **Directory structure** of Linux systems
-- **Command chaining** with pipes and redirects
-- **Basic scripting** concepts and variables
-
-## 🔍 Cybersecurity Focus Areas
-
-### Important System Directories:
-- `/etc` - Configuration files
-- `/var/log` - System and application logs  
-- `/home` - User directories
-- `/tmp` - Temporary files (security concern)
-- `/usr/bin` - User commands and tools
-
-### Essential Security Commands Introduced:
-- `find` for locating files and SUID binaries
-- `ps` for process monitoring
-- `netstat` for network connections
-- `grep` for log analysis
-- File permission commands (`ls -la`, `chmod`)
-
-## 📚 Additional Resources
-- [Bash Manual](https://www.gnu.org/software/bash/manual/)
-- [Linux Command Reference](https://www.linux.org/docs/)
-- [Learning Path Recommendations](./LEARNING_PATH.md)
-
-## ✅ Knowledge Check
-Before moving to Day 2, ensure you can:
-- [ ] Navigate directories using `cd`, `ls`, `pwd`
-- [ ] Create, copy, move, and delete files/directories
-- [ ] Use `man` pages to understand command options
-- [ ] Combine commands with pipes (`|`) and redirection (`>`)
-- [ ] Explain why these skills matter for cybersecurity
-
-## 🚀 Next Steps
-**Day 2 Preview**: Variables, user input, conditional statements, and your first custom security scripts!
+## 🚀 **Tomorrow Preview**
+Day 2: Variables and making your first interactive script!
 
 ---
-🎓 **Learning Tip**: Focus on understanding each command rather than memorizing syntax. Practice regularly to build muscle memory!
+
+## 📋 **Commands Reference**
+
+### **Navigation**
+- `pwd` - Print working directory
+- `ls` - List files (`ls -la` for detailed view)
+- `cd` - Change directory (`cd ..` for parent, `cd -` for previous)
+
+### **File Operations**
+- `touch filename` - Create empty file
+- `mkdir dirname` - Create directory
+- `cp source dest` - Copy files
+- `mv source dest` - Move/rename files
+- `rm filename` - Delete files (CAREFUL!)
+
+### **Viewing Files**
+- `cat filename` - Display file content
+- `echo "text"` - Display text
+- `wc filename` - Count lines/words/characters
+
+### **Getting Help**
+- `man command` - Manual page
+- `command --help` - Quick help
+- `which command` - Find command location
+
+## 💡 **Pro Tips**
+- Use Tab completion to avoid typing full filenames
+- Use `history` to see previous commands
+- Use `!!` to repeat the last command
+- Use Ctrl+C to cancel a running command
