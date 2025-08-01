@@ -47,8 +47,9 @@ setup_aliases() {
     fi
     
     # Backup existing bashrc
-    if cp ~/.bashrc ~/.bashrc.backup.$(date +%Y%m%d_%H%M%S); then
-        echo "✓ Backup created: ~/.bashrc.backup.$(date +%Y%m%d_%H%M%S)"
+    local timestamp=$(date +%Y%m%d_%H%M%S)
+    if cp ~/.bashrc ~/.bashrc.backup.$timestamp; then
+        echo "✓ Backup created: ~/.bashrc.backup.$timestamp"
     else
         echo "✗ Failed to backup ~/.bashrc"
         return 1
