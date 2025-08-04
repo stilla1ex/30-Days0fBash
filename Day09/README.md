@@ -1,32 +1,43 @@
 # Day 9: Command-Line Arguments and Options
 
-## Learning Goal
-Make professional command-line tools with proper argument processing.
+## Learning Goals
+Master command-line argument processing and build professional command-line tools
 
-## What You'll Learn Today
-- Processing command-line arguments
-- Handling flags and options
-- Using getopts for professional tools
-- Building user-friendly interfaces
+## Concepts Covered
+- Command-line argument processing ($1, $2, $@, $#)
+- Options and flags with getopts
+- Advanced argument validation
+- Building user-friendly CLI interfaces
+- Help systems and usage documentation
 
-## Today's Concepts to Master
-```bash
-$1, $2, $@, $#, getopts, shift, case
-```
+## Exercises
+1. `basic_arguments.sh` - Command-line argument fundamentals
+2. `getopts_processing.sh` - Professional option handling with getopts
+3. `advanced_options.sh` - Complex argument validation and processing
+4. `daily_challenge.sh` - Complete CLI application framework
 
-## Learning Path (4-5 hours)
+## Success Criteria
+- Process command-line arguments effectively
+- Handle options and flags professionally
+- Validate and sanitize user inputs
+- Create intuitive command-line interfaces
 
-### **Step 1**: Basic Arguments (60 min)
-```bash
-./exercises/basic_arguments.sh
-```
+## Today's Learning Path
 
-### **Step 2**: Getopts Processing (120 min)
-```bash
-./exercises/getopts_processing.sh
-```
+### Step 1: Basic Arguments (60 min)
+Learn argument processing fundamentals
 
-### **Step 3**: Advanced Option Handling (90 min)
+### Step 2: Getopts Processing (75 min)
+Master professional option handling
+
+### Step 3: Advanced Options (60 min)
+Build complex argument validation systems
+
+### Step 4: CLI Framework Challenge (90 min)
+Create a complete command-line application
+
+## Success Milestone
+By the end of Day 9, you'll build professional command-line tools with robust argument handling.
 ```bash
 ./exercises/advanced_options.sh
 ```
