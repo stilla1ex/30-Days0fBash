@@ -1,22 +1,41 @@
-# Day 10: Process Management
+# Day 10: Security and System Administration
 
 ## Learning Goals
-Control and monitor system processes for system administration
+Master security practices, system administration tasks, and privilege management essential for secure bash scripting
 
 ## Concepts Covered
-- Background process execution
-- Job control and process monitoring
-- Signal handling and process communication
-- System resource management
+- File permissions and ownership management
+- User and group administration
+- Secure coding practices in bash
+- System security auditing
+- Password management and validation
+- Logging and security monitoring
 
 ## Exercises
-1. `background_jobs.sh` - Background process management
-2. `process_monitoring.sh` - Monitor running processes
-3. `signal_handling.sh` - Handle system signals
-4. `daily_challenge.sh` - System monitor dashboard
+1. `permissions_management.sh` - File permissions and ownership control
+2. `user_administration.sh` - User and group management operations
+3. `security_practices.sh` - Secure coding and validation techniques
+4. `daily_challenge.sh` - Security audit and hardening system
 
 ## Success Criteria
-- Manage background processes effectively
-- Monitor system resources
-- Handle process signals appropriately
-- Create system monitoring tools
+- Manage file permissions and ownership securely
+- Implement proper input validation and sanitization
+- Create secure user management scripts
+- Build automated security auditing tools
+
+## Today's Learning Path
+
+### Step 1: Permissions Management (60 min)
+Learn file permissions, ownership, and access control
+
+### Step 2: User Administration (75 min)
+Master user and group management operations
+
+### Step 3: Security Practices (60 min)
+Implement secure coding and validation techniques
+
+### Step 4: Security Audit Challenge (90 min)
+Build a comprehensive security audit system
+
+## Success Milestone
+By the end of Day 10, you'll implement security best practices and system administration like a security-conscious administrator.

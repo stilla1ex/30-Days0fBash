@@ -1,53 +1,43 @@
 # Day 8: Error Handling and Debugging
 
-## Learning Goal
-Make your scripts bulletproof with proper error handling and debugging.
+## Learning Goals
+Master error handling and debugging techniques to create robust, production-ready scripts
 
-## What You'll Learn Today
+## Concepts Covered
 - Exit codes and error detection
-- Try/catch equivalents in bash
-- Debugging techniques
+- Error trapping and signal handling
+- Debugging techniques and tools
 - Logging and error reporting
+- Script robustness and reliability
 
-## Today's Concepts to Master
-```bash
-set -e, set -u, trap, $?, ||, &&, 2>&1, logger
-```
+## Exercises
+1. `exit_codes.sh` - Exit codes and error detection fundamentals
+2. `error_trapping.sh` - Advanced error handling with trap
+3. `debugging_techniques.sh` - Script debugging and troubleshooting
+4. `daily_challenge.sh` - Robust file processing system
 
-## Learning Path (3-4 hours)
+## Success Criteria
+- Handle errors gracefully in scripts
+- Debug script issues effectively
+- Implement proper logging systems
+- Create bulletproof production scripts
 
-### **Step 1**: Exit Codes and Detection (60 min)
-```bash
-./exercises/exit_codes.sh
-```
+## Today's Learning Path
 
-### **Step 2**: Error Trapping (90 min)
-```bash
-./exercises/error_trapping.sh
-```
+### Step 1: Exit Codes (60 min)
+Learn error detection and status codes
 
-### **Step 3**: Debugging Techniques (90 min)
-```bash
-./exercises/debugging.sh
-```
+### Step 2: Error Trapping (75 min)
+Master trap for robust error handling
 
-### **Step 4**: Build a Robust Script (120 min)
-```bash
-./scripts/bulletproof_script.sh
-```
+### Step 3: Debugging Techniques (60 min)
+Debug scripts effectively with built-in tools
 
-## Daily Challenge
-Create a safe file processor:
-```bash
-#!/bin/bash
-set -e
-set -u
+### Step 4: Robust Script Challenge (90 min)
+Build a bulletproof file processing system
 
-process_file() {
-    local file="$1"
-    if [[ ! -f "$file" ]]; then
-        echo "ERROR: File $file not found" >&2
-        return 1
+## Success Milestone
+By the end of Day 8, you'll write production-ready scripts with comprehensive error handling.
     fi
     
     if [[ ! -r "$file" ]]; then
