@@ -116,7 +116,7 @@ pause
 
 echo "=== FINAL VERIFICATION ==="
 echo "Let's see what you've built:"
-echo
+echof
 
 echo "Project structure:"
 echo "Current directory: $(pwd)"
