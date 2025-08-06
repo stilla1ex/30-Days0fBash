@@ -2,13 +2,14 @@
 # Day 1 Exercise: Help Systems
 # Learn how to get help when you need it
 
-echo "🆘 Day 1: Getting Help"
+echo "Day 1: Getting Help"
 echo "Learn to help yourself - the most important skill!"
 echo
 
+# pause function
 pause() {
     echo
-    read -p "👆 Try this command, then press Enter to continue..."
+    read -p "Try this command, then press Enter to continue..."
     echo
 }
 
@@ -17,7 +18,7 @@ echo
 echo "Every command has a manual page with detailed information:"
 echo "Command: man ls"
 echo "This opens the manual for the 'ls' command"
-echo "Use 'q' to quit, arrow keys to scroll"
+echo "Use 'q' key on the keyboard to quit the manual page, arrow keys to scroll"
 pause
 
 echo "TIP: The manual will open. Here's what to look for:"
