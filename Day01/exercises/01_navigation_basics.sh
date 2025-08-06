@@ -1,15 +1,15 @@
 #!/bin/bash
 # Day 1 Exercise: Navigation Basics
-# Learn to move around the file system
+# Learning how to move around the file system
 
-echo "🧭 Day 1: Navigation Basics"
-echo "Let's learn to navigate like a pro!"
+echo "Day 1: Navigation Basics"
+echo "Hellow friend, let's learn to navigate like a pro!"
 echo
 
 # Function to pause and wait for user
 pause() {
     echo
-    read -p "👆 Try this command, then press Enter to continue..."
+    read -p "Try this command, then press Enter to continue..."
     echo
 }
 
@@ -18,7 +18,7 @@ echo
 echo "First, let's see where we are:"
 echo "Command: pwd"
 echo "This shows your current directory (Print Working Directory)"
-pause
+pause # This calls the pause function
 
 echo "Your current location: $(pwd)"
 echo
@@ -32,7 +32,7 @@ pause
 
 echo "Files in current directory:"
 ls
-echo
+echo # Note that the empty echo command prints an empty line
 
 echo "For more details, try:"
 echo "Command: ls -l"
@@ -92,7 +92,7 @@ echo "Command: ls /usr/bin | head -5"
 ls /usr/bin | head -5
 echo
 
-echo "[OK] Navigation Basics Complete!"
+echo "[OK] Navigation of basics is complete"
 echo
 echo "LEARNED: What you learned:"
 echo "   - pwd - shows current directory"

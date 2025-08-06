@@ -38,20 +38,20 @@ echo
 
 echo "Let's put some content in it:"
 echo "Command: echo 'Hello World!' > hello.txt"
-echo "The > symbol redirects output to a file"
+echo "The > symbol redirects output to a file, in this cas our hello.txt"
 pause
 
-echo 'Hello World!' > hello.txt
+echo 'Hello World!' > hello.txt # adds the Hello world to the file hello.txt
 echo "[OK] Added content to hello.txt"
 echo
 
-echo "Let's see what's in the file:"
+echo "Let's see what's in the file using the cat command:"
 echo "Command: cat hello.txt"
 echo "cat displays the contents of a file"
 pause
 
 echo "Content of hello.txt:"
-cat hello.txt
+cat hello.txt # Ths will display Hello World on the terminal
 echo
 
 echo "=== PART 2: Copying Files ==="
@@ -132,7 +132,7 @@ echo "=== PART 6: Cleanup ==="
 echo
 echo "Let's clean up our practice files:"
 echo "Command: rm greeting.txt"
-echo "rm deletes files (be careful!)"
+echo "rm deletes files (always be careful with this command!)"
 pause
 
 rm greeting.txt
